@@ -39,7 +39,8 @@
 }
 
 /* Body Section */
-body {
+header,
+main {
   width: 1170px;
   margin: 50px auto;
 }
@@ -53,6 +54,8 @@ nav {
 .logo {
   display: flex;
   gap: 10px;
+  align-items: center;
+  justify-content: center;
 }
 .logo > h1 {
   color: #131318;
@@ -395,11 +398,10 @@ p {
   gap: 10px;
 }
 .item1 {
-  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 573px;
+  width: calc(50% - 12px);
   height: 284px;
   flex-shrink: 0;
   border-radius: 16px;
@@ -408,30 +410,54 @@ p {
 }
 
 .item2 {
-  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 573px;
+  width: calc(50% - 12px);
   height: 284px;
   flex-shrink: 0;
   border-radius: 16px;
   border: 1px solid rgba(41, 206, 246, 0.2);
   background: rgba(41, 206, 246, 0.05);
 }
-.item3 > div > p {
+.item1 > div > p {
   color: #5a5a5d;
   font-family: Mulish;
+  text-align: center;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 26px; /* 162.5% */
 }
+.item2 > div > p {
+  color: #5a5a5d;
+  font-family: Mulish;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+}
+.item3 > div > p {
+  color: #5a5a5d;
+  font-family: Mulish;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+}
+.item1 > div > h1 {
+  margin: 15px 0;
+}
+.item2 > div > h1 {
+  margin: 15px 0;
+}
 .item3 > div > h1 {
   margin: 15px 0;
 }
 .item3 {
-  padding: 10px;
+  padding: 25px;
   margin: 10px auto;
   display: flex;
   flex-direction: column;
@@ -443,23 +469,28 @@ p {
   border: 1px solid rgba(233, 68, 68, 0.2);
   background: rgba(233, 68, 68, 0.05);
 }
+.daine-chaap {
+  position: relative;
+  left: 20px;
+  top: 15px;
+}
 .newsletter {
   display: flex;
   gap: 10px;
 }
 .form-section {
-  width: 474px;
-  height: 400px;
+  width: auto;
+  height: 340px;
   flex-shrink: 0;
-  padding: 20px 10px 0 20px;
+  padding: 40px;
   border: 2px solid #ff5400;
   border-radius: 16px;
-  padding-bottom: -40px;
 }
 .form-section hr {
   width: auto;
   height: 1px;
   background: rgba(19, 19, 24, 0.1);
+  margin-bottom: 15px;
 }
 .form-section p {
   margin-top: 10px;
@@ -476,37 +507,34 @@ p {
   gap: 24px;
 }
 .input-1 {
-  width: auto;
-  height: 52px;
-  flex-shrink: 0;
-  border-radius: 8px;
-  background-color: rgba(19, 19, 24, 0.05);
-}
-.input-1[type="text"]::placeholder {
-  width: auto;
-  height: 52px;
-  background-color: rgba(19, 19, 24, 0.05);
-}
-.form-input button {
-  align-self: center;
-  margin-top: 20px;
   width: 393px;
   height: 52px;
   flex-shrink: 0;
   border-radius: 8px;
+  padding: 0;
+}
+input.input-1 {
+  padding-left: 15px;
+}
+.input-1[type="text"]::placeholder {
+  color: rgba(19, 19, 24, 0.3);
+}
+.form-input button {
+  align-self: center;
+  width: 393px;
+  height: 52px;
+  border-radius: 8px;
   background: #ff5400;
   border: none;
   color: #fff;
+  cursor: pointer;
 }
 .img-section {
-  width: 672px;
+  width: 660px;
   height: 422px;
-  flex-shrink: 0;
-  border-radius: 16px;
   border-radius: 16px;
   background: url(../Images/Last.png), lightgray 50% / cover no-repeat;
   position: relative;
-  z-index: 1;
 }
 .save-up {
   width: 224px;
@@ -514,8 +542,8 @@ p {
   transform: rotate(-19.628deg);
   flex-shrink: 0;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 30px;
+  right: 12px;
   z-index: 2;
   border-radius: 16px;
   background: #ff5400;
@@ -528,7 +556,6 @@ p {
   font-weight: 800;
   line-height: normal;
   text-align: center;
-
 }
 .save-up > p {
   margin-top: 15px;
@@ -546,11 +573,12 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 1185px;
-  height: 502px;
+  width: auto;
+  height: auto;
   flex-shrink: 0;
   background: rgba(19, 19, 24, 0.05);
 }
+
 footer p {
   padding-top: 15px;
   width: 769px;
@@ -569,6 +597,12 @@ footer p {
   height: 1px;
   background: rgba(19, 19, 24, 0.1);
 }
+.footer-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 25px;
+}
 .the-last-text {
   color: #131318;
   font-family: Inter;
@@ -576,11 +610,14 @@ footer p {
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+  padding-top: 0;
+  margin-bottom: 30px;
 }
 /* Mobile Responsive style */
 @media screen and (max-width: 600px) {
-  body {
-    width: auto;
+  header,
+  main {
+    width: 475px;
     margin: 20px 20px;
   }
   .banner-section {
@@ -590,8 +627,7 @@ footer p {
     background-size: auto;
   }
   .banner-content {
-    margin: 0px 45px 0px 45px;
-    padding-top: -10px;
+    margin: 0;
     display: flex;
     flex-direction: column;
   }
@@ -610,6 +646,7 @@ footer p {
     justify-content: center;
     align-items: center;
     width: auto;
+    height: auto;
     margin: 0 45px;
     padding: 0;
   }
@@ -667,7 +704,6 @@ footer p {
     flex-direction: column;
   }
   .third-row {
-    flex-shrink: 0;
     display: flex;
     flex-direction: column;
   }
@@ -680,10 +716,12 @@ footer p {
   .bandarban {
     width: auto;
     margin-bottom: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .items-container {
-    width: 459px;
+    width: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -693,12 +731,12 @@ footer p {
   .item1,
   .item2 {
     padding: 10px 10px 15px;
-    width: 335px;
+    width: auto;
     height: 289px;
     flex-shrink: 0;
   }
   .item3 {
-    width: 335px;
+    width: auto;
     height: 289px;
     padding: 10px 10px 15px;
   }
@@ -713,26 +751,31 @@ footer p {
     width: auto;
     height: 300px;
     flex-shrink: 0;
+    margin-bottom: -20px;
+  }
+  .hr-tag {
+    width: 375px;
+    height: 1px;
+    background: rgba(19, 19, 24, 0.1);
   }
   .save-up {
     position: absolute;
     bottom: 10;
-    right: 0;
+    right: 10px;
     z-index: 2;
   }
   footer {
-    margin-top: 50px;
+    margin: 0 auto;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: auto;
-    height: 309px;
-    flex-shrink: 0;
+    max-width: auto;
+    height: auto;
   }
   footer p {
-    width:auto;
+    width: auto;
     color: #5a5a5d;
     text-align: center;
     font-family: Mulish;
@@ -740,5 +783,12 @@ footer p {
     font-style: normal;
     font-weight: 400;
     line-height: 24px; /* 171.429% */
+    margin: auto 40px;
+  }
+  footer img {
+    padding-top: 30px;
+  }
+  .footer-logo-container > div > img {
+    padding-top: 0;
   }
 }
